@@ -19,12 +19,8 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-          npx create-next-app@latest . --ts --tailwind --eslint --app --src-dir --import-alias --use-npm --no-git --force
           npm install @radix-ui/react-label @radix-ui/react-slot class-variance-authority clsx lucide-react tailwind-merge tailwindcss-animate
 
-      - name: Create components directory
-        run: mkdir -p components/ui
-          
       - name: Build website
         run: npm run build
 
