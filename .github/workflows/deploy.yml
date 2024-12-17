@@ -17,8 +17,11 @@ jobs:
           node-version: '18'
           
       - name: Install dependencies
-        run: npm install
-        
+        run: |
+          npm install
+          npm install @shadcn/ui
+          npx shadcn-ui@latest init --yes
+          
       - name: Build website
         run: npm run build
 
